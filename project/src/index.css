@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-ink-600;
+  }
+  body {
+    @apply bg-ink-900 text-slate-200 font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(132, 204, 22, 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(20, 184, 166, 0.06), transparent);
+    background-attachment: fixed;
+  }
+  ::selection {
+    @apply bg-lime-500/30 text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient-lime {
+    background: linear-gradient(135deg, #a3e635 0%, #84cc16 50%, #65a30d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-teal {
+    background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .glass {
+    background: rgba(17, 20, 31, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .glass-card {
+    background: linear-gradient(145deg, rgba(24, 28, 43, 0.7), rgba(10, 12, 20, 0.8));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(132, 204, 22, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(132, 204, 22, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .glow-lime {
+    box-shadow: 0 0 24px rgba(132, 204, 22, 0.25), 0 0 48px rgba(132, 204, 22, 0.1);
+  }
+  .glow-teal {
+    box-shadow: 0 0 24px rgba(20, 184, 166, 0.2), 0 0 48px rgba(20, 184, 166, 0.08);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0c14;
+}
+::-webkit-scrollbar-thumb {
+  background: #222738;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e3447;
+}
